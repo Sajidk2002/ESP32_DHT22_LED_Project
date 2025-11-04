@@ -10,16 +10,16 @@ void setup() {
   Serial.begin(115200);
   dht.begin();
   pinMode(LEDPIN, OUTPUT);
-  Serial.println(" ESP32 + DHT22 + LED ready!");
+  Serial.println("ESP32 + DHT22 + LED READY!");
 }
 
 void loop() {
   float temp = dht.readTemperature();
   float hum = dht.readHumidity();
 
-  Serial.print(" Temp: ");
+  Serial.print("TEMPERATURE: ");
   Serial.print(temp);
-  Serial.print("°C  |   Hum: ");
+  Serial.print(" °C  |  HUMIDITY: ");
   Serial.println(hum);
 
   if (temp > 30) {
@@ -30,3 +30,4 @@ void loop() {
 
   delay(2000);
 }
+
